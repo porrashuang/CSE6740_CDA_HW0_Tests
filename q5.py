@@ -5,17 +5,17 @@ test = {   'name': 'q5',
     'suites': [   {   'cases': [   {   'code': ">>> observation = {'hot_day': 1, 'weekend': 1}\n"
                                                '>>> output = compute_posterior(data, observation)\n'
                                                ">>> expected_output = {'chocolate': 0.6667, 'strawberry': 0.3333, 'vanilla': 0.0}\n"
-                                               '>>> for flavor in expected_output:\n'
-                                               "...     assert abs(output[flavor] - expected_output[flavor]) < 0.001, f'Expected {expected_output[flavor]} for {flavor}, got {output[flavor]}'\n",
+                                               ">>> assert all((abs(output[flavor] - expected_output[flavor]) < 0.001 for flavor in expected_output)), f'Expected {expected_output}, got {output}'\n",
                                        'hidden': False,
-                                       'locked': False},
+                                       'locked': False,
+                                       'points': 5},
                                    {   'code': ">>> observation = {'weekend': 1}\n"
                                                '>>> output = compute_posterior(data, observation)\n'
                                                ">>> expected_output = {'chocolate': 0.3333, 'vanilla': 0.2222, 'strawberry': 0.4444}\n"
-                                               '>>> for flavor in expected_output:\n'
-                                               "...     assert abs(output[flavor] - expected_output[flavor]) < 0.001, f'Expected {expected_output[flavor]} for {flavor}, got {output[flavor]}'\n",
+                                               ">>> assert all((abs(output[flavor] - expected_output[flavor]) < 0.001 for flavor in expected_output)), f'Expected {expected_output}, got {output}'\n",
                                        'hidden': False,
-                                       'locked': False}],
+                                       'locked': False,
+                                       'points': 10}],
                       'scored': True,
                       'setup': '',
                       'teardown': '',
