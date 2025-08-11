@@ -20,23 +20,19 @@ test = {   'name': 'q6',
                                        'hidden': False,
                                        'locked': False,
                                        'points': 3},
-                                   {   'code': '>>> """" # BEGIN TEST CONFIG\n'
-                                               '>>> points: 3\n'
-                                               '>>> """\n'
-                                               '>>> transpose, inverse = q5_matrix_operations(np.array([[1, 2], [3, 4]]))\n'
+                                   {   'code': '>>> transpose, inverse = q5_matrix_operations(np.array([[1, 2], [3, 4]]))\n'
                                                ">>> assert np.array_equal(transpose, np.array([[1, 3], [2, 4]])), 'Transpose test failed'\n"
                                                ">>> assert np.allclose(inverse, np.array([[-2, 1], [1.5, -0.5]])), 'Inverse test failed for input [[1, 2], [3, 4]]'\n",
                                        'hidden': False,
-                                       'locked': False},
-                                   {   'code': '>>> """" # BEGIN TEST CONFIG\n'
-                                               '>>> points: 3\n'
-                                               '>>> """\n'
-                                               '>>> rank, (U, S, Vt) = q6_more_matrix_operations(np.array([[1, 2], [3, 4]]))\n'
+                                       'locked': False,
+                                       'points': 3},
+                                   {   'code': '>>> rank, (U, S, Vt) = q6_more_matrix_operations(np.array([[1, 2], [3, 4]]))\n'
                                                ">>> assert rank == 2, 'Rank test failed for input [[1, 2], [3, 4]]'\n"
                                                '>>> A_hat = U @ np.diag(S) @ Vt\n'
                                                ">>> assert np.allclose(A_hat, np.array([[1, 2], [3, 4]])), 'SVD reconstruction failed'\n",
                                        'hidden': False,
-                                       'locked': False}],
+                                       'locked': False,
+                                       'points': 3}],
                       'scored': True,
                       'setup': '',
                       'teardown': '',
